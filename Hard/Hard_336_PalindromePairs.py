@@ -3,7 +3,8 @@ class Solution:
         pairs = []
         for i in range(len(words)):
             for j in range(i+1):
-                if i==j: continue
-                if ((words[i]+words[j]) == (words[i]+words[j])[::-1]): pairs.append([i,j])
-                if ((words[j]+words[i]) == (words[j]+words[i])[::-1]): pairs.append([j,i])
+                words_ij = words[i]+words[j]
+                words_ji = words[j]+words[i]
+                if (words_ij == words_ij[::-1]): pairs.append([i,j])
+                if (words_ji == words_ji[::-1]): pairs.append([j,i])
         return pairs
