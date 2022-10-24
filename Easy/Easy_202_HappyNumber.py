@@ -8,3 +8,4 @@ class Solution:
                 current_no = sum([int(x)**2 for x in str(current_no)])
             else: return False
         return True
+#:)
